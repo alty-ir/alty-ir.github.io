@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/fa/dev", {data:[{}],fetch:[],mutations:[]});
