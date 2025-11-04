@@ -34,11 +34,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Ali TabeshPour - Backend Software Engineer | .NET Core & Node.js Expert</title>
+    <title>Blog - Ali TabeshPour</title>
     
     <!-- Primary SEO Meta Tags -->
-    <meta name="title" content="Ali TabeshPour - Backend Software Engineer | .NET Core & Node.js Expert">
-    <meta name="description" content="Backend Software Engineer with 8+ years of experience in .NET Core, Node.js, and modern web technologies. Specializing in microservices, scalable systems, and AI integration. Based in Italy.">
+    <meta name="title" content="Blog - Ali TabeshPour">
+    <meta name="description" content="Tutorials, insights, and thoughts on backend development, .NET Core, Node.js, Docker, and modern web technologies.">
     <meta name="keywords" content="backend developer, software engineer, .NET Core, ASP.NET Core, Node.js, microservices, C#, Entity Framework, RESTful API, Docker, Kubernetes, PostgreSQL, MongoDB, SQL Server, Ali TabeshPour, web developer, full-stack developer, DevOps, CI/CD">
     <meta name="author" content="Ali TabeshPour">
     <meta name="robots" content="index, follow">
@@ -46,10 +46,10 @@
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://alitabesh.dev/">
+    <meta property="og:url" content="https://alitabesh.dev/blog.html">
     <meta property="og:site_name" content="Ali TabeshPour">
-    <meta property="og:title" content="Ali TabeshPour - Backend Software Engineer | .NET Core & Node.js Expert">
-    <meta property="og:description" content="Backend Software Engineer with 8+ years of experience in .NET Core, Node.js, and modern web technologies. Specializing in microservices, scalable systems, and AI integration. Based in Italy.">
+    <meta property="og:title" content="Blog - Ali TabeshPour">
+    <meta property="og:description" content="Tutorials, insights, and thoughts on backend development, .NET Core, Node.js, Docker, and modern web technologies.">
     <meta property="og:image" content="https://alitabesh.dev/icon/apple-icon-180x180.png">
     <meta property="og:locale" content="en_US">
     
@@ -57,12 +57,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@alty_ir">
     <meta name="twitter:creator" content="@alty_ir">
-    <meta name="twitter:title" content="Ali TabeshPour - Backend Software Engineer | .NET Core & Node.js Expert">
-    <meta name="twitter:description" content="Backend Software Engineer with 8+ years of experience in .NET Core, Node.js, and modern web technologies. Specializing in microservices, scalable systems, and AI integration. Based in Italy.">
+    <meta name="twitter:title" content="Blog - Ali TabeshPour">
+    <meta name="twitter:description" content="Tutorials, insights, and thoughts on backend development, .NET Core, Node.js, Docker, and modern web technologies.">
     <meta name="twitter:image" content="https://alitabesh.dev/icon/android-icon-192x192.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://alitabesh.dev/">
+    <link rel="canonical" href="https://alitabesh.dev/blog.html">
     
     <!-- Additional SEO -->
     <meta name="theme-color" content="#60a5fa">
@@ -117,43 +117,92 @@
         <section class="content-section active">
             <div class="hero">
                 <div class="hero-content">
-                    <img src="/images/alitabesh.png" alt="Ali TabeshPour" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color);">
+                    <img src="/images/alitabesh.png" alt="Ali TabeshPour" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
                     <div class="hero-text">
-                        <h1 class="hero-title">Hi, I'm Ali TabeshPour</h1>
+                        <h1 class="hero-title">Blog</h1>
+                        <p class="hero-subtitle">Thoughts, tutorials, and insights</p>
                     </div>
                 </div>
             </div>
-            <div class="markdown-content">
-                <h2>Backend Software Engineer</h2>
-<p>Backend Software Engineer with 8+ years of experience specializing in .NET Core, Node.js, and modern web technologies. Proven track record of architecting microservices, building scalable applications serving 100,000+ users, leading development teams of 5+, and delivering high-performance, AI-integrated solutions.</p>
-<p>Currently based in Italy, I bring a strong background in developing robust backend systems, RESTful APIs, and cloud-based solutions. I&#39;m passionate about clean architecture, scalable systems, and solving complex technical challenges.</p>
-<h3>Technical Expertise</h3>
-<p><strong>Core Technologies:</strong></p>
-<ul>
-<li><strong>.NET Core &amp; C#</strong>: ASP.NET Core, Entity Framework Core, Microservices Architecture</li>
-<li><strong>Backend Development</strong>: RESTful APIs, JWT/JWE Authentication, WebSockets</li>
-<li><strong>Databases</strong>: SQL Server, PostgreSQL, MongoDB</li>
-<li><strong>DevOps &amp; Tools</strong>: Docker, Kubernetes, CI/CD, Git, Linux, Nginx</li>
-<li><strong>Cloud &amp; Services</strong>: Firebase, Serverless Architecture</li>
-</ul>
-<p><strong>Also Experienced With:</strong></p>
-<ul>
-<li>Node.js, Python/Django, Vue.js/Nuxt.js</li>
-<li>HTML/CSS, JavaScript, Bootstrap, jQuery</li>
-<li>Swagger, NLog, PM2, WordPress</li>
-</ul>
-<h3>Get in Touch</h3>
-<ul>
-<li><strong>Email</strong>: <a href="mailto:hi@alitabesh.dev">hi@alitabesh.dev</a></li>
-<li><strong>GitHub</strong>: <a href="https://github.com/alty-ir">alty-ir</a></li>
-<li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/alitabesh">alitabesh</a></li>
-<li><strong>Telegram</strong>: <a href="https://t.me/alty_ir">@alty_ir</a></li>
-</ul>
-<h3>Download Resume</h3>
-<p>📄 <a href="https://github.com/alty-ir/Resume/releases/download/latest/main.pdf">Download my latest resume (PDF)</a></p>
-
+            <div id="filter-info" style="display: none; text-align: center; margin-bottom: 1.5rem;">
+                <span style="color: var(--text-light);">Filtering by tag: <strong id="current-tag"></strong></span>
+                <button onclick="clearFilter()" class="btn btn-secondary" style="margin-left: 1rem; padding: 0.4rem 1rem; font-size: 0.9rem;">
+                    <i class="fas fa-times"></i> Clear Filter
+                </button>
+            </div>
+            <div class="blog-grid">
+                
+        <article class="blog-card" data-tags="docker,devops,containerization">
+            <a href="/blog/docker-start.html" style="text-decoration: none; color: inherit;">
+                <div class="blog-card-content">
+                    <h3 class="blog-card-title">Getting Started with Docker</h3>
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> November 4, 2025</span>
+                        <span><i class="far fa-user"></i> Ali TabeshPour</span>
+                    </div>
+                    <p class="blog-card-excerpt">Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.</p>
+                    <div class="blog-card-tags">
+                        <span class="tag" data-tag="docker" onclick="event.preventDefault(); event.stopPropagation(); filterByTag('docker')">docker</span><span class="tag" data-tag="devops" onclick="event.preventDefault(); event.stopPropagation(); filterByTag('devops')">devops</span><span class="tag" data-tag="containerization" onclick="event.preventDefault(); event.stopPropagation(); filterByTag('containerization')">containerization</span>
+                    </div>
+                </div>
+            </a>
+        </article>
+    
             </div>
         </section>
+        
+        <script>
+        function filterByTag(tag) {
+            const cards = document.querySelectorAll('.blog-card');
+            const filterInfo = document.getElementById('filter-info');
+            const currentTag = document.getElementById('current-tag');
+            
+            cards.forEach(card => {
+                const tags = card.dataset.tags.split(',');
+                if (tags.includes(tag)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            filterInfo.style.display = 'block';
+            currentTag.textContent = tag;
+            
+            // Update URL without reloading
+            const url = new URL(window.location);
+            url.searchParams.set('tag', tag);
+            window.history.pushState({}, '', url);
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function clearFilter() {
+            const cards = document.querySelectorAll('.blog-card');
+            const filterInfo = document.getElementById('filter-info');
+            
+            cards.forEach(card => {
+                card.style.display = 'block';
+            });
+            
+            filterInfo.style.display = 'none';
+            
+            // Remove tag from URL
+            const url = new URL(window.location);
+            url.searchParams.delete('tag');
+            window.history.pushState({}, '', url);
+        }
+        
+        // Check URL parameter on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tag = urlParams.get('tag');
+            if (tag) {
+                filterByTag(tag);
+            }
+        });
+        </script>
     
         </div>
     </main>

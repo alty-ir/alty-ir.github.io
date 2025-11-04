@@ -1,0 +1,23 @@
+{
+  "name": "alitabesh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio and blog - Ali TabeshPour",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npm run build && http-server -p 8000 -o",
+    "serve": "http-server -p 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "static-site"
+  ],
+  "author": "Ali TabeshPour <hi@alitabesh.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^11.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
