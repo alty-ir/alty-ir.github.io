@@ -34,7 +34,6 @@ Temporary Items
 
 # Node.js
 node_modules/
-package-lock.json
 
 # Optional
 .env
