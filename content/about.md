@@ -31,6 +31,4 @@ Currently based in Italy, I bring a strong background in developing robust backe
 - **LinkedIn**: [alitabesh](https://linkedin.com/in/alitabesh)
 - **Telegram**: [@alty_ir](https://t.me/alty_ir)
 
-### Download Resume
 
-📄 [Download my latest resume (PDF)](https://github.com/alty-ir/Resume/releases/download/latest/main.pdf)
