@@ -97,6 +97,9 @@ npm --version   # Should show 10.x.x
 # Install OpenClaw globally
 npm install -g @openclaw/cli
 
+# Alternative: Use the official installer script
+curl -fsSL https://openclaw.ai/install.sh | bash
+
 # Verify installation
 openclaw --version
 ```
