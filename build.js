@@ -20,7 +20,7 @@ const BLOG_POSTS = [
     {
         filename: 'docker-start.md',
         title: 'Getting Started with Docker',
-        date: '2026-03-30',
+        date: '2025-11-04',
         author: 'Ali TabeshPour',
         tags: ['docker', 'devops', 'containerization'],
         excerpt: 'Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.'
