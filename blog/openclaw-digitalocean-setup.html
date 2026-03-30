@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    
+     █████  ██      ██     ████████  █████  ██████  ███████ ███████ ██   ██ ██████   ██████  ██    ██ ██████  
+    ██   ██ ██      ██        ██    ██   ██ ██   ██ ██      ██      ██   ██ ██   ██ ██    ██ ██    ██ ██   ██ 
+    ███████ ██      ██        ██    ███████ ██████  █████   ███████ ███████ ██████  ██    ██ ██    ██ ██████  
+    ██   ██ ██      ██        ██    ██   ██ ██   ██ ██           ██ ██   ██ ██      ██    ██ ██    ██ ██   ██ 
+    ██   ██ ███████ ██        ██    ██   ██ ██████  ███████ ███████ ██   ██ ██       ██████   ██████  ██   ██ 
+    
+    ╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                                                      ║
+    ║  👋 Hi there! I see you're checking out the code.                                                   ║
+    ║                                                                                                      ║
+    ║  I'm Ali TabeshPour - Backend Software Engineer                                                     ║
+    ║  Specializing in .NET Core, Node.js, and modern web technologies                                    ║
+    ║                                                                                                      ║
+    ║  📧 Want to work together? Let's talk!                                                              ║
+    ║  Email: hi@alitabesh.dev                                                                            ║
+    ║                                                                                                      ║
+    ║  🔗 Find me online:                                                                                 ║
+    ║  GitHub:   https://github.com/alty-ir                                                               ║
+    ║  LinkedIn: https://linkedin.com/in/alitabesh                                                        ║
+    ║  Website:  https://alitabesh.dev                                                                    ║
+    ║                                                                                                      ║
+    ║  ⭐ Like what you see? This site is open source!                                                    ║
+    ║  https://github.com/alty-ir/alty-ir.github.io                                                       ║
+    ║                                                                                                      ║
+    ╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Building a Personal AI Assistant on DigitalOcean for $12/month - Ali TabeshPour</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Building a Personal AI Assistant on DigitalOcean for $12/month - Ali TabeshPour">
+    <meta name="description" content="Learn how to build your own personal AI assistant using OpenClaw on a DigitalOcean VPS for just $12/month. Includes setup, GitHub integration, and daily automation.">
+    <meta name="keywords" content="backend developer, software engineer, .NET Core, ASP.NET Core, Node.js, microservices, C#, Entity Framework, RESTful API, Docker, Kubernetes, PostgreSQL, MongoDB, SQL Server, Ali TabeshPour, web developer, full-stack developer, DevOps, CI/CD">
+    <meta name="author" content="Ali TabeshPour">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alitabesh.dev/blog/openclaw-digitalocean-setup.html">
+    <meta property="og:site_name" content="Ali TabeshPour">
+    <meta property="og:title" content="Building a Personal AI Assistant on DigitalOcean for $12/month - Ali TabeshPour">
+    <meta property="og:description" content="Learn how to build your own personal AI assistant using OpenClaw on a DigitalOcean VPS for just $12/month. Includes setup, GitHub integration, and daily automation.">
+    <meta property="og:image" content="https://alitabesh.dev/icon/apple-icon-180x180.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@alty_ir">
+    <meta name="twitter:creator" content="@alty_ir">
+    <meta name="twitter:title" content="Building a Personal AI Assistant on DigitalOcean for $12/month - Ali TabeshPour">
+    <meta name="twitter:description" content="Learn how to build your own personal AI assistant using OpenClaw on a DigitalOcean VPS for just $12/month. Includes setup, GitHub integration, and daily automation.">
+    <meta name="twitter:image" content="https://alitabesh.dev/icon/android-icon-192x192.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alitabesh.dev/blog/openclaw-digitalocean-setup.html">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#60a5fa">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/manifest.json">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">Ali TabeshPour</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">About</a></li>
+                <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://github.com/alty-ir" target="_blank" class="nav-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+                <li><a href="https://linkedin.com/in/alitabesh" target="_blank" class="nav-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <section class="content-section active">
+                <div class="back-button-container">
+                    <a href="/blog.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Blog
+                    </a>
+                </div>
+                <article class="markdown-content">
+                    
+            <div style="text-align: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);">
+                <img src="/images/alitabesh.png" alt="Ali TabeshPour" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 1rem; object-fit: cover; border: 2px solid var(--primary-color);">
+                <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                    <span><i class="far fa-calendar"></i> March 30, 2026</span>
+                    <span style="margin-left: 1rem;"><i class="far fa-user"></i> Ali TabeshPour</span>
+                </div>
+                <div style="margin-top: 1rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+                    <a href="/blog.html?tag=ai" class="tag" style="cursor: pointer; text-decoration: none;">ai</a><a href="/blog.html?tag=openclaw" class="tag" style="cursor: pointer; text-decoration: none;">openclaw</a><a href="/blog.html?tag=digitalocean" class="tag" style="cursor: pointer; text-decoration: none;">digitalocean</a><a href="/blog.html?tag=automation" class="tag" style="cursor: pointer; text-decoration: none;">automation</a><a href="/blog.html?tag=assistant" class="tag" style="cursor: pointer; text-decoration: none;">assistant</a>
+                </div>
+            </div>
+        
+                    <h1>Build Your Own AI Assistant for $12/Month with OpenClaw on DigitalOcean</h1>
+<p>Have you ever wanted your own AI assistant that can help with coding, research, and daily tasks? What if I told you could have one running 24/7 for just <strong>$12 per month</strong>? In this guide, I&#39;ll show you how to set up OpenClaw on a DigitalOcean VPS with free NVIDIA API access.</p>
+<h2>Why OpenClaw?</h2>
+<p>OpenClaw is an open-source AI assistant framework that gives you:</p>
+<ul>
+<li><strong>Local-first operation</strong> - Your data stays private</li>
+<li><strong>Multi-platform support</strong> - Works with Telegram, WhatsApp, Discord</li>
+<li><strong>Extensible skills</strong> - Add custom capabilities via plugins</li>
+<li><strong>Free AI inference</strong> - Uses NVIDIA&#39;s free API endpoints</li>
+</ul>
+<h2>What You&#39;ll Need</h2>
+<ol>
+<li><strong>DigitalOcean account</strong> (new users get $200 credit)</li>
+<li><strong>NVIDIA API key</strong> (free tier available)</li>
+<li><strong>About 30 minutes</strong> of setup time</li>
+</ol>
+<h2>Step 1: Create Your DigitalOcean VPS</h2>
+<h3>Choose Your Droplet</h3>
+<p>DigitalOcean offers several plans, but for OpenClaw, I recommend:</p>
+<ul>
+<li><strong>Basic Droplet</strong> ($6/month)</li>
+<li><strong>1GB RAM, 1 vCPU, 25GB SSD</strong></li>
+<li><strong>Ubuntu 22.04 LTS</strong> (most compatible)</li>
+</ul>
+<h3>Setup Process</h3>
+<ol>
+<li>Log into <a href="https://cloud.digitalocean.com">DigitalOcean</a></li>
+<li>Click &quot;Create&quot; → &quot;Droplets&quot;</li>
+<li>Select:<ul>
+<li><strong>Region</strong>: Choose closest to you</li>
+<li><strong>Image</strong>: Ubuntu 22.04 LTS x64</li>
+<li><strong>Plan</strong>: Basic → $6/month</li>
+<li><strong>Authentication</strong>: SSH key (recommended)</li>
+</ul>
+</li>
+<li>Click &quot;Create Droplet&quot;</li>
+</ol>
+<p>Your VPS will be ready in about 1 minute!</p>
+<h2>Step 2: Connect to Your VPS</h2>
+<h3>SSH Access</h3>
+<pre><code class="language-bash"># Connect to your droplet
+ssh root@YOUR_DROPLET_IP
+
+# Update system packages
+apt update &amp;&amp; apt upgrade -y
+</code></pre>
+<h3>Basic Security Setup</h3>
+<pre><code class="language-bash"># Create a non-root user
+adduser openclaw
+usermod -aG sudo openclaw
+
+# Set up firewall
+ufw allow OpenSSH
+ufw enable
+</code></pre>
+<h2>Step 3: Get Your NVIDIA API Key</h2>
+<p>NVIDIA offers free access to their AI models through their API platform:</p>
+<ol>
+<li>Visit <a href="https://build.nvidia.com/">NVIDIA API Catalog</a></li>
+<li>Sign up for a free account</li>
+<li>Navigate to &quot;API Keys&quot;</li>
+<li>Create a new API key</li>
+<li>Note down your key - you&#39;ll need it soon</li>
+</ol>
+<p><strong>Important</strong>: The free tier is generous but has rate limits. For personal use, it&#39;s more than enough.</p>
+<h2>Step 4: Install OpenClaw</h2>
+<h3>Install Node.js</h3>
+<p>OpenClaw requires Node.js 18 or later:</p>
+<pre><code class="language-bash"># Install Node.js 22
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Verify installation
+node --version  # Should show v22.x.x
+npm --version   # Should show 10.x.x
+</code></pre>
+<h3>Install OpenClaw</h3>
+<pre><code class="language-bash"># Install OpenClaw globally
+npm install -g @openclaw/cli
+
+# Alternative: Use the official installer script
+curl -fsSL https://openclaw.ai/install.sh | bash
+
+# Verify installation
+openclaw --version
+</code></pre>
+<h2>Step 5: Configure OpenClaw</h2>
+<h3>Initialize Your Workspace</h3>
+<pre><code class="language-bash"># Create workspace directory
+mkdir -p ~/.openclaw/workspace
+cd ~/.openclaw/workspace
+
+# Initialize OpenClaw
+openclaw init
+</code></pre>
+<h3>Set Up NVIDIA API Integration</h3>
+<p>Create a configuration file:</p>
+<pre><code class="language-bash"># Create config directory
+mkdir -p ~/.openclaw/config
+
+# Create API configuration
+cat &gt; ~/.openclaw/config/api-keys.json &lt;&lt; EOF
+{
+  &quot;nvidia&quot;: &quot;YOUR_NVIDIA_API_KEY_HERE&quot;
+}
+EOF
+</code></pre>
+<p>Replace <code>YOUR_NVIDIA_API_KEY_HERE</code> with your actual NVIDIA API key.</p>
+<h2>Step 6: Connect Your Messaging Platform</h2>
+<p>OpenClaw supports multiple platforms. Here&#39;s how to set up Telegram (my personal favorite):</p>
+<h3>Telegram Setup</h3>
+<ol>
+<li>Message <a href="https://t.me/botfather">@BotFather</a> on Telegram</li>
+<li>Send <code>/newbot</code> and follow the prompts</li>
+<li>Copy the bot token</li>
+<li>Configure OpenClaw:</li>
+</ol>
+<pre><code class="language-bash"># Add Telegram configuration
+openclaw config set telegram.token &quot;YOUR_BOT_TOKEN_HERE&quot;
+
+# Start OpenClaw with Telegram
+openclaw gateway --telegram
+</code></pre>
+<h3>Alternative: WhatsApp</h3>
+<p>If you prefer WhatsApp, you&#39;ll need to:</p>
+<ol>
+<li>Install the OpenClaw WhatsApp bridge</li>
+<li>Scan QR code with your phone</li>
+<li>Start chatting!</li>
+</ol>
+<h2>Step 7: Test Your Assistant</h2>
+<h3>Start OpenClaw</h3>
+<pre><code class="language-bash"># Start the gateway (runs in background)
+openclaw gateway start
+
+# Check status
+openclaw status
+</code></pre>
+<h3>Send Your First Message</h3>
+<p>Message your bot on Telegram:</p>
+<pre><code>Hey! Can you help me with something?
+</code></pre>
+<p>You should get a response from your AI assistant!</p>
+<h2>Step 8: Set Up Persistence</h2>
+<p>To ensure OpenClaw runs 24/7, create a system service:</p>
+<pre><code class="language-bash"># Create systemd service
+sudo nano /etc/systemd/system/openclaw.service
+</code></pre>
+<p>Add this content:</p>
+<pre><code class="language-ini">[Unit]
+Description=OpenClaw AI Assistant
+After=network.target
+
+[Service]
+Type=simple
+User=openclaw
+WorkingDirectory=/home/openclaw/.openclaw/workspace
+ExecStart=/usr/bin/openclaw gateway
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Enable the service:</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload
+sudo systemctl enable openclaw
+sudo systemctl start openclaw
+sudo systemctl status openclaw
+</code></pre>
+<h2>Cost Breakdown</h2>
+<p>Let&#39;s look at the monthly costs:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DigitalOcean Droplet</td>
+<td>$6</td>
+<td>Basic plan, 1GB RAM</td>
+</tr>
+<tr>
+<td>NVIDIA API</td>
+<td>$0</td>
+<td>Free tier available</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$6/month</strong></td>
+<td>Actually cheaper than $12!</td>
+</tr>
+</tbody></table>
+<p>If you need more power, upgrade to the $12/month plan (2GB RAM).</p>
+<h2>Advanced Features</h2>
+<p>Once you have the basics working, explore these features:</p>
+<h3>Custom Skills</h3>
+<p>OpenClaw supports custom skills. Create your own:</p>
+<pre><code class="language-bash"># Create a new skill
+openclaw skills create my-skill
+</code></pre>
+<h3>Web Search Integration</h3>
+<p>Enable web search for real-time information:</p>
+<pre><code class="language-bash">openclaw config set web.enabled true
+</code></pre>
+<h3>File Operations</h3>
+<p>Your assistant can read/write files, run commands, and more!</p>
+<h2>Troubleshooting Common Issues</h2>
+<h3>Port Conflicts</h3>
+<p>If port 3000 is busy, use a different port:</p>
+<pre><code class="language-bash">openclaw gateway --port 8080
+</code></pre>
+<h3>API Rate Limits</h3>
+<p>If you hit NVIDIA rate limits:</p>
+<ul>
+<li>Wait a few minutes</li>
+<li>Consider upgrading to paid tier if needed</li>
+<li>Use alternative AI providers</li>
+</ul>
+<h3>Connection Issues</h3>
+<p>Check your VPS firewall:</p>
+<pre><code class="language-bash">ufw status
+ufw allow 3000  # OpenClaw default port
+</code></pre>
+<h2>Why This Setup Rocks</h2>
+<ol>
+<li><strong>Cost Effective</strong>: $6-12/month vs. $20+/month for commercial alternatives</li>
+<li><strong>Private</strong>: Your data stays on your VPS</li>
+<li><strong>Customizable</strong>: Add any features you want</li>
+<li><strong>24/7 Availability</strong>: Always ready to help</li>
+<li><strong>Multi-platform</strong>: Works across messaging apps</li>
+</ol>
+<h2>Real-World Use Cases</h2>
+<p>I use my OpenClaw assistant for:</p>
+<ul>
+<li><strong>Code review</strong> - Paste code and get feedback</li>
+<li><strong>Research</strong> - Quick web searches and summaries</li>
+<li><strong>Task automation</strong> - File operations, system commands</li>
+<li><strong>Learning</strong> - Explain complex topics simply</li>
+<li><strong>Writing</strong> - Draft emails, documents, and more</li>
+</ul>
+<h2>Next Steps</h2>
+<ol>
+<li><strong>Experiment</strong>: Try different AI models and configurations</li>
+<li><strong>Customize</strong>: Build skills specific to your workflow</li>
+<li><strong>Secure</strong>: Set up backups and monitoring</li>
+<li><strong>Share</strong>: Contribute back to the OpenClaw community</li>
+</ol>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://docs.openclaw.ai">OpenClaw Documentation</a></li>
+<li><a href="https://docs.digitalocean.com">DigitalOcean Documentation</a></li>
+<li><a href="https://docs.nvidia.com">NVIDIA API Docs</a></li>
+<li><a href="https://github.com/openclaw/openclaw">OpenClaw GitHub</a></li>
+</ul>
+<h2>Conclusion</h2>
+<p>Setting up your own AI assistant is easier than you think! For less than the cost of a streaming service, you get a powerful, private AI companion that&#39;s available 24/7.</p>
+<p>The $12/month estimate was conservative - you can actually get started for just $6/month. The real value isn&#39;t the cost savings though; it&#39;s having an AI assistant that understands your context and works exactly how you want.</p>
+<p>Give it a try! The setup process takes about 30 minutes, and you&#39;ll have a working AI assistant by the end. Feel free to reach out if you get stuck - I&#39;m happy to help!</p>
+<p>Happy building! 🤖</p>
+
+                </article>
+            </section>
+        
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Ali TabeshPour. All rights reserved.</p>
+                </div>
+                <div class="footer-repo">
+                    <i class="fab fa-github"></i> 
+                    This website is open source - 
+                    <a href="https://github.com/alty-ir/alty-ir.github.io" target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Easter egg console message
+        console.log('%c █████  ██      ██     ████████  █████  ██████  ███████ ███████ ██   ██ ██████   ██████  ██    ██ ██████  ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ██      ██        ██    ██   ██ ██   ██ ██      ██      ██   ██ ██   ██ ██    ██ ██    ██ ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c███████ ██      ██        ██    ███████ ██████  █████   ███████ ███████ ██████  ██    ██ ██    ██ ██████  ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ██      ██        ██    ██   ██ ██   ██ ██           ██ ██   ██ ██      ██    ██ ██    ██ ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ███████ ██        ██    ██   ██ ██████  ███████ ███████ ██   ██ ██       ██████   ██████  ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('');
+        console.log('%c👋 Hi there! I see you\'re checking out the console.', 'font-size: 14px; font-weight: bold;');
+        console.log('');
+        console.log('%cI\'m Ali TabeshPour - Backend Software Engineer', 'font-size: 12px;');
+        console.log('%cSpecializing in .NET Core, Node.js, and modern web technologies', 'font-size: 12px; color: #9ca3af;');
+        console.log('');
+        console.log('%c📧 Want to work together? Let\'s talk!', 'font-size: 12px; font-weight: bold;');
+        console.log('%cEmail: hi@alitabesh.dev', 'font-size: 12px; color: #60a5fa; font-weight: bold;');
+        console.log('');
+        console.log('%c🔗 Find me online:', 'font-size: 12px;');
+        console.log('%cGitHub:   https://github.com/alty-ir', 'font-size: 11px; color: #9ca3af;');
+        console.log('%cLinkedIn: https://linkedin.com/in/alitabesh', 'font-size: 11px; color: #9ca3af;');
+        console.log('%cWebsite:  https://alitabesh.dev', 'font-size: 11px; color: #9ca3af;');
+        console.log('');
+        console.log('%c⭐ Like what you see? This site is open source!', 'font-size: 12px;');
+        console.log('%chttps://github.com/alty-ir/alty-ir.github.io', 'font-size: 11px; color: #60a5fa;');
+        console.log('');
+    </script>
+    <script src="/js/theme.js"></script>
+</body>
+</html>

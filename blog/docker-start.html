@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    
+     █████  ██      ██     ████████  █████  ██████  ███████ ███████ ██   ██ ██████   ██████  ██    ██ ██████  
+    ██   ██ ██      ██        ██    ██   ██ ██   ██ ██      ██      ██   ██ ██   ██ ██    ██ ██    ██ ██   ██ 
+    ███████ ██      ██        ██    ███████ ██████  █████   ███████ ███████ ██████  ██    ██ ██    ██ ██████  
+    ██   ██ ██      ██        ██    ██   ██ ██   ██ ██           ██ ██   ██ ██      ██    ██ ██    ██ ██   ██ 
+    ██   ██ ███████ ██        ██    ██   ██ ██████  ███████ ███████ ██   ██ ██       ██████   ██████  ██   ██ 
+    
+    ╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                                                      ║
+    ║  👋 Hi there! I see you're checking out the code.                                                   ║
+    ║                                                                                                      ║
+    ║  I'm Ali TabeshPour - Backend Software Engineer                                                     ║
+    ║  Specializing in .NET Core, Node.js, and modern web technologies                                    ║
+    ║                                                                                                      ║
+    ║  📧 Want to work together? Let's talk!                                                              ║
+    ║  Email: hi@alitabesh.dev                                                                            ║
+    ║                                                                                                      ║
+    ║  🔗 Find me online:                                                                                 ║
+    ║  GitHub:   https://github.com/alty-ir                                                               ║
+    ║  LinkedIn: https://linkedin.com/in/alitabesh                                                        ║
+    ║  Website:  https://alitabesh.dev                                                                    ║
+    ║                                                                                                      ║
+    ║  ⭐ Like what you see? This site is open source!                                                    ║
+    ║  https://github.com/alty-ir/alty-ir.github.io                                                       ║
+    ║                                                                                                      ║
+    ╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Getting Started with Docker - Ali TabeshPour</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Getting Started with Docker - Ali TabeshPour">
+    <meta name="description" content="Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.">
+    <meta name="keywords" content="backend developer, software engineer, .NET Core, ASP.NET Core, Node.js, microservices, C#, Entity Framework, RESTful API, Docker, Kubernetes, PostgreSQL, MongoDB, SQL Server, Ali TabeshPour, web developer, full-stack developer, DevOps, CI/CD">
+    <meta name="author" content="Ali TabeshPour">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alitabesh.dev/blog/docker-start.html">
+    <meta property="og:site_name" content="Ali TabeshPour">
+    <meta property="og:title" content="Getting Started with Docker - Ali TabeshPour">
+    <meta property="og:description" content="Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.">
+    <meta property="og:image" content="https://alitabesh.dev/icon/apple-icon-180x180.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@alty_ir">
+    <meta name="twitter:creator" content="@alty_ir">
+    <meta name="twitter:title" content="Getting Started with Docker - Ali TabeshPour">
+    <meta name="twitter:description" content="Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.">
+    <meta name="twitter:image" content="https://alitabesh.dev/icon/android-icon-192x192.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alitabesh.dev/blog/docker-start.html">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#60a5fa">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/manifest.json">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/">Ali TabeshPour</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">About</a></li>
+                <li><a href="/blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://github.com/alty-ir" target="_blank" class="nav-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+                <li><a href="https://linkedin.com/in/alitabesh" target="_blank" class="nav-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <section class="content-section active">
+                <div class="back-button-container">
+                    <a href="/blog.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Blog
+                    </a>
+                </div>
+                <article class="markdown-content">
+                    
+            <div style="text-align: center; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);">
+                <img src="/images/alitabesh.png" alt="Ali TabeshPour" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 1rem; object-fit: cover; border: 2px solid var(--primary-color);">
+                <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">
+                    <span><i class="far fa-calendar"></i> November 4, 2025</span>
+                    <span style="margin-left: 1rem;"><i class="far fa-user"></i> Ali TabeshPour</span>
+                </div>
+                <div style="margin-top: 1rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+                    <a href="/blog.html?tag=docker" class="tag" style="cursor: pointer; text-decoration: none;">docker</a><a href="/blog.html?tag=devops" class="tag" style="cursor: pointer; text-decoration: none;">devops</a><a href="/blog.html?tag=containerization" class="tag" style="cursor: pointer; text-decoration: none;">containerization</a>
+                </div>
+            </div>
+        
+                    <h1>Getting Started with Docker</h1>
+<p>Docker has revolutionized the way we develop, ship, and run applications. In this post, I&#39;ll walk you through the basics of Docker and how to get started.</p>
+<h2>What is Docker?</h2>
+<p>Docker is a platform that enables developers to package applications into containers—standardized executable components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.</p>
+<h2>Why Use Docker?</h2>
+<ol>
+<li><strong>Consistency</strong>: Docker ensures your application works the same way in development, testing, and production</li>
+<li><strong>Isolation</strong>: Each container runs in isolation, preventing conflicts between applications</li>
+<li><strong>Portability</strong>: Containers can run on any system that supports Docker</li>
+<li><strong>Efficiency</strong>: Containers share the host OS kernel, making them lighter than virtual machines</li>
+</ol>
+<h2>Installing Docker</h2>
+<h3>On macOS</h3>
+<pre><code class="language-bash"># Download Docker Desktop from docker.com
+# Or use Homebrew:
+brew install --cask docker
+</code></pre>
+<h3>On Linux</h3>
+<pre><code class="language-bash"># Update package index
+sudo apt-get update
+
+# Install Docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# Start Docker
+sudo systemctl start docker
+</code></pre>
+<h2>Your First Docker Container</h2>
+<p>Let&#39;s run a simple container:</p>
+<pre><code class="language-bash">docker run hello-world
+</code></pre>
+<p>This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.</p>
+<h2>Basic Docker Commands</h2>
+<p>Here are some essential Docker commands:</p>
+<pre><code class="language-bash"># List running containers
+docker ps
+
+# List all containers (including stopped)
+docker ps -a
+
+# List images
+docker images
+
+# Stop a container
+docker stop &lt;container-id&gt;
+
+# Remove a container
+docker rm &lt;container-id&gt;
+
+# Remove an image
+docker rmi &lt;image-id&gt;
+</code></pre>
+<h2>Creating a Dockerfile</h2>
+<p>A Dockerfile is a text file that contains instructions for building a Docker image. Here&#39;s a simple example for a Node.js application:</p>
+<pre><code class="language-dockerfile"># Use official Node.js runtime as base image
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy application files
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+# Start the application
+CMD [&quot;node&quot;, &quot;index.js&quot;]
+</code></pre>
+<h2>Building and Running Your Image</h2>
+<pre><code class="language-bash"># Build the image
+docker build -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+</code></pre>
+<h2>Docker Compose</h2>
+<p>For multi-container applications, Docker Compose is incredibly useful:</p>
+<pre><code class="language-yaml">version: &#39;3.8&#39;
+
+services:
+  web:
+    build: .
+    ports:
+      - &quot;3000:3000&quot;
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+  
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_PASSWORD=example
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
+</code></pre>
+<p>Run with:</p>
+<pre><code class="language-bash">docker-compose up
+</code></pre>
+<h2>Best Practices</h2>
+<ol>
+<li><strong>Use official base images</strong> when possible</li>
+<li><strong>Keep images small</strong> by using alpine variants</li>
+<li><strong>Use .dockerignore</strong> to exclude unnecessary files</li>
+<li><strong>Don&#39;t run containers as root</strong> when possible</li>
+<li><strong>Use multi-stage builds</strong> to reduce final image size</li>
+<li><strong>Pin versions</strong> of base images for reproducibility</li>
+</ol>
+<h2>Conclusion</h2>
+<p>Docker is an essential tool in modern development workflows. It simplifies deployment, ensures consistency across environments, and makes it easier to manage dependencies. Start small, experiment with containers, and gradually incorporate Docker into your development process.</p>
+<p>Happy containerizing! 🐳</p>
+
+                </article>
+            </section>
+        
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Ali TabeshPour. All rights reserved.</p>
+                </div>
+                <div class="footer-repo">
+                    <i class="fab fa-github"></i> 
+                    This website is open source - 
+                    <a href="https://github.com/alty-ir/alty-ir.github.io" target="_blank" rel="noopener noreferrer">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Easter egg console message
+        console.log('%c █████  ██      ██     ████████  █████  ██████  ███████ ███████ ██   ██ ██████   ██████  ██    ██ ██████  ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ██      ██        ██    ██   ██ ██   ██ ██      ██      ██   ██ ██   ██ ██    ██ ██    ██ ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c███████ ██      ██        ██    ███████ ██████  █████   ███████ ███████ ██████  ██    ██ ██    ██ ██████  ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ██      ██        ██    ██   ██ ██   ██ ██           ██ ██   ██ ██      ██    ██ ██    ██ ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('%c██   ██ ███████ ██        ██    ██   ██ ██████  ███████ ███████ ██   ██ ██       ██████   ██████  ██   ██ ', 'color: #60a5fa; font-weight: bold;');
+        console.log('');
+        console.log('%c👋 Hi there! I see you\'re checking out the console.', 'font-size: 14px; font-weight: bold;');
+        console.log('');
+        console.log('%cI\'m Ali TabeshPour - Backend Software Engineer', 'font-size: 12px;');
+        console.log('%cSpecializing in .NET Core, Node.js, and modern web technologies', 'font-size: 12px; color: #9ca3af;');
+        console.log('');
+        console.log('%c📧 Want to work together? Let\'s talk!', 'font-size: 12px; font-weight: bold;');
+        console.log('%cEmail: hi@alitabesh.dev', 'font-size: 12px; color: #60a5fa; font-weight: bold;');
+        console.log('');
+        console.log('%c🔗 Find me online:', 'font-size: 12px;');
+        console.log('%cGitHub:   https://github.com/alty-ir', 'font-size: 11px; color: #9ca3af;');
+        console.log('%cLinkedIn: https://linkedin.com/in/alitabesh', 'font-size: 11px; color: #9ca3af;');
+        console.log('%cWebsite:  https://alitabesh.dev', 'font-size: 11px; color: #9ca3af;');
+        console.log('');
+        console.log('%c⭐ Like what you see? This site is open source!', 'font-size: 12px;');
+        console.log('%chttps://github.com/alty-ir/alty-ir.github.io', 'font-size: 11px; color: #60a5fa;');
+        console.log('');
+    </script>
+    <script src="/js/theme.js"></script>
+</body>
+</html>
