@@ -287,7 +287,7 @@ function buildAboutPage() {
  * Build blog listing page
  */
 function buildBlogListPage() {
-    const blogCards = BLOG_POSTS.map(post => `
+    const blogCards = BLOG_POSTS.slice().reverse().map(post => `
         <article class="blog-card" data-tags="${post.tags.join(',')}">
             <a href="/blog/${post.filename.replace('.md', '.html')}" style="text-decoration: none; color: inherit;">
                 <div class="blog-card-content">
