@@ -29,6 +29,14 @@ const state = {
 // ===================================
 const BLOG_POSTS = [
     {
+        filename: 'openclaw-digitalocean-setup.md',
+        title: 'Building a Personal AI Assistant on DigitalOcean for $12/month',
+        date: '2026-03-30',
+        author: 'Ali TabeshPour',
+        tags: ['ai', 'openclaw', 'digitalocean', 'automation', 'assistant'],
+        excerpt: 'Learn how to build your own personal AI assistant using OpenClaw on a DigitalOcean VPS for just $12/month. Includes setup, GitHub integration, and daily automation.'
+    },
+    {
         filename: 'docker-start.md',
         title: 'Getting Started with Docker',
         date: '2025-11-04',
@@ -36,7 +44,6 @@ const BLOG_POSTS = [
         tags: ['docker', 'devops', 'containerization'],
         excerpt: 'Docker has revolutionized the way we develop, ship, and run applications. Learn the basics of Docker and how to get started with containerization.'
     }
-    // Add more blog posts here as you create them
 ];
 
 // ===================================
